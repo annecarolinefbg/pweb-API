@@ -6,11 +6,10 @@
   "directories": {
     "test": "tests"
   },
- "scripts": {
-        "start": "npx nodemon server.js",
-        "test": "cross-env NODE_ENV=test mocha tests/**/*.test.js --exit"
-      },
-      
+  "scripts": {
+    "start": "npx nodemon server.js",
+    "test": "cross-env NODE_ENV=test mocha tests/**/*.test.js --exit"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/annecarolinefbg/pweb-API.git"
