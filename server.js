@@ -3,9 +3,12 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import sequelize from './config/database.js';
 
+
 import usuariorouter from './routes/UsuarioRouters.js';
-
-
+import comentariorouter from './routes/ComentarioRouters.js';
+import cursorouter from './routes/CursosRouters.js';
+import progressorouter from './routes/ProgressoRouters.js';
+import matricularouter from './routes/MatriculaRouters.js';
 
 
 
@@ -19,6 +22,10 @@ app.get('/version', (req, res) =>{
 });
 
 app.use('/usuario', usuariorouter);
+app.use('/comentario', comentariorouter);
+app.use('/curso', cursorouter);
+app.use('/matricula', matricularouter);
+app.use('/pregresso', progressorouter);
 
 
 sequelize.sync({ alter: true })
