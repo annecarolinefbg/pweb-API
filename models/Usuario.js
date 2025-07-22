@@ -1,7 +1,14 @@
 import { DataTypes } from 'sequelize';
+import { dataTypes } from 'sequelize-test-helpers';
 
 export default (sequelize) => {
   const Usuario = sequelize.define('Usuario', {
+   id: {
+    type:DataTypes.INTEGER,
+    allowNull:true,
+    primaryKey: true
+   },
+
     nome: {
       type: DataTypes.STRING,
       allowNull: false
@@ -12,7 +19,7 @@ export default (sequelize) => {
       unique: true
     },
     senha: {
-      type: DataTypes.STRING,
+      type: DataTypes.STRING, 
       allowNull: false
     },
     tipo: {

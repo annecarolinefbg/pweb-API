@@ -30,7 +30,7 @@ app.use('/pregresso', progressorouter);
 
 sequelize.sync({ alter: true })
   .then(() => {
-    console.log('Tudo certo chefe ✅');
+    console.log('API funcionando ✅');
     app.listen(port, () => {
       console.log(`Server ok port ${port}`);
     });
